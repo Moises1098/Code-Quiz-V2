@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <header>
+        <div id="score-btn">View Previous Scores</div>
+        <div id="time-card" class="hide">
+            <p> Time Left: <span id="timer"></span> seconds </p>
+        </div>
+    </header>
+
+    <section id="home">
+        <h1 id="quiz-title">Code Quiz</h1>
+        <div id="sub-title">Test your knowledge of HTML, CSS, and JavaScript.</div>
+        <div id="quiz-caption">Try to answer the following code related questions within the time limit. Keep in mind
+            that wrong answers will penalize your score by 10 points and time by 10 seconds!</div>
+        <button id="start-btn">Start Quiz</button>
+    </section>
+
+    <section id="quiz" class="hide">
+        <div id="question-title">Question <span id="question-number"></span>: <span id="question">This is just a sample
+                question for spacing purposes?</span></div>
+
+        <div id="answers" class="btn-group">
+            <button class="answer-btn btn">Answer 1</button>
+            <button class="answer-btn btn">Answer 2</button>
+            <button class="answer-btn btn">Answer 3</button>
+            <button class="answer-btn btn">Answer 4</button>
+        </div>
+
+        <div id="check">
+            <span id="right" class="hide">Correct!</span>
+            <span id="wrong" class="hide">Incorrect!</span>
+        </div>
+
+        <div id="next-btn">
+            <button class="next-btn btn">Next</button>
+        </div>
+    </section>
+
+    <section id="results" class="hide">
+        <h1 class="results-title">Results</h1>
+        <p class="results-caption">Your final score is <span id="score-count">0</span></p>
+
+        <div id="initial">
+            <form id="initial-form" method="POST">
+                <label for="initial-text">Enter initials: </label>
+                <input type="text" placeholder="AB" name="initial-text" id="initial-text" />
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+    <section id="previous-scores" class="hide">
+        <div>
+            <h1 class="scores-title">Previous Scores</h1>
+        </div>
+        <ol id="score-list"></ol>
+        <button id="home-btn">Home</button>
+    </section>
+
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
